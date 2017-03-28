@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1">
+    <meta name="description" content="Hexagonal Consulting" >
+    <title>Hexagonal Consulting</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+            document.addEventListener('DOMContentLoaded',function() {
+                var width;
+
+                var resizeContent = function() {
+                    console.log('getting....')
+                    width = (getWidth()/100 * 1) + 'px';
+                    console.log(width);
+                    var hexContentWrapper = document.querySelectorAll('.hex-content-wrapper');
+                    var hexArray = [].slice.call(hexContentWrapper);
+                    console.log(hexArray.length);
+                    console.log(document.getElementsByClassName('hex-content-wrapper'))
+                    for(var i = 0; i < hexContentWrapper.length; ++i) {
+                        console.log(hexContentWrapper[i].style)
+                        hexContentWrapper[i].style.fontSize = width;
+                    }
+
+                }
+                function getWidth() {
+                  if (self.innerWidth) {
+                    return self.innerWidth;
+                  }
+
+                  if (document.documentElement && document.documentElement.clientWidth) {
+                    return document.documentElement.clientWidth;
+                  }
+
+                  if (document.body) {
+                    return document.body.clientWidth;
+                  }
+                }
+
+                console.log('running.........')
+                window.onload = resizeContent;
+                window.onresize = resizeContent;
+            })
+
+
+    </script>
+</head>
+<body>
+
+<!--html Page-->
+<div class="index-page-wrapper">
+
+        <!--  First Page -->
+        <div class="main-page">
+           <header class="main-header">
+                <nav class="navbar main-nav">
+                    <li><a href="#">SUSUL</a></li>
+                    <li><a href="#">FEEBEE LAY</a></li>
+                    <li><a href="#">BADESH</a></li>
+                </nav>
+                <div class="header-contact-wrapper">
+                    <div class="hexabooking">
+                        <p>Nous booker</p>
+                        <a>HexaBooking</a>
+                    </div>
+                    <div class="contact-info">
+                        <p><a href="mailto:contact@hexagonalconsulting.com">
+                        contact@hexagonalconsulting.com</a></p>
+                        <a href="tel:+33648300579">+336 48 30 05 79</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+           </header>
+           <div class="top-section-wrapper">
+              <div class="top-section">
+                   <div class="logo">
+                    <!--<img src="" alt="logo image">-->
+                   </div>
+                   <div class="site-tagline">
+                       <h1 class="title">EXPERTS RUBY</h1>
+                       <h2 class="tagline">Nous offrons nos services en development,
+                           audit et coaching technique.
+                       </h2>
+                   </div>
+              </div>
+           </div>
+        </div>
+
+    <!-- Second Page -->
+    <section class="services-page-wrapper">
+        <article class="services-page">
+          <div class="row">
+               <div class="col-md-4 col-md-offset-4">
+                   <p class="service-page-title">NOTRE EXPERIANCE</p>
+               </div>
+           </div>
+           <div class="row service-wrapper">
+            <div class="col-md-6 col-md-offset-3">
+
+               <div class="service col-md-12">
+                  <h2>AUDIT</h2>
+                  <p>
+                      Nous avons construit des systèmes allant de l'outil technique interne hautement technique à l'application BTC à forts volumes. Nos développeurs séniors ont 10 ans d'expériences sur Ruby et sont reconnus dans la communauté. Que vous souhaitiez commencer de nouveaux projets ou retravailler des projets existants, nous sommes prêts à collaborer.
+                  </p>
+              </div>
+
+                <div class="service col-md-12">
+                    <h2>DEVELOPPEMENT</h2>
+                    <p>
+                        Besoin de faire le point sur votre appli ? Nous étudions le code de votre application pour en faire ressortir les forces et les faiblesses. Nous réalisons par la suite des recommandations pour l'améliorer.
+                    </p>
+                </div>
+                <div class="service col-md-12">
+                    <h2>COACHING TECHNIQUE</h2>
+                    <p>
+                        Votre équipe est composée de junior ? Vous souhaitez les aider à progresser ? Nos développeurs séniors peuvent collaborer avec eux afin de vous garantir la qualité technique de votre projet, augmenter leur productivité et les aider à monter en compétence.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Third Page -->
+    <div class="third-page-wrapper">
+        <div class="third-page">
+          <p class="third-page-title">NOTRE EQUIPE</p>
+          <section class="hex-wrapper">
+            <div class="hexagrid">
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon pusher"></div>
+              </div>
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <section class="hex-content-wrapper">
+                      <p class="hex-content-title">Roudoulou</p>
+                      <p>Expert en roulade</p>
+                      <div class="hex-icon-wrapper">
+                          <div class="hex-icon twitter"></div>
+                          <div class="hex-icon linkedin"></div>
+                      </div>    
+                    </section>
+                  </div>
+                </div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon pusher"></div>
+                
+              </div>
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="hexagon ex-mg-left">
+                  <div class="inner-hex">
+                      <section class="hex-content-wrapper">
+                          <p class="hex-content-title">Roudoulou</p>
+                          <p>Expert en roulade</p>
+                          <div class="hex-icon-wrapper">
+                              <div class="hex-icon twitter"></div>
+                              <div class="hex-icon linkedin"></div>
+                          </div>    
+                        </section>
+                    </div>
+                  </div>
+                
+                <div class="hexagon pusher"></div>    
+              </div>
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="hexagon pusher"></div>
+              </div>
+            <!--     5th row  -->
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="http://webneel.com/daily/sites/default/files/images/daily/09-2013/3-deer-wildlife-photography.preview.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="hexagon pusher"></div>
+              </div>
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                      
+                    </div>
+                  </div>
+                </div><div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+               
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <section class="hex-content-wrapper">
+                      <p class="hex-content-title">Roudoulou</p>
+                      <p>Expert en roulade</p>
+                      <div class="hex-icon-wrapper">
+                          <div class="hex-icon twitter"></div>
+                          <div class="hex-icon linkedin"></div>
+                      </div>    
+                    </section>
+                  </div>
+                </div>
+                
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                
+                 <div class="hexagon">
+                  <div class="inner-hex">
+                    <section class="hex-content-wrapper">
+                      <p class="hex-content-title">Roudoulou</p>
+                      <p>Expert en roulade</p>
+                      <div class="hex-icon-wrapper">
+                          <div class="hex-icon twitter"></div>
+                          <div class="hex-icon linkedin"></div>
+                      </div>    
+                    </section>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <section class="hex-content-wrapper">
+                      <p class="hex-content-title">Roudoulou</p>
+                      <p>Expert en roulade</p>
+                      <div class="hex-icon-wrapper">
+                          <div class="hex-icon twitter"></div>
+                          <div class="hex-icon linkedin"></div>
+                      </div>    
+                    </section>
+                  </div>
+                </div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <section class="hex-content-wrapper">
+                      <p class="hex-content-title">Roudoulou</p>
+                      <p>Expert en roulade</p>
+                      <div class="hex-icon-wrapper">
+                          <div class="hex-icon twitter"></div>
+                          <div class="hex-icon linkedin"></div>
+                      </div>    
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="book-us">
+                <p>Booker Nous</p>
+                <div class="booking-btn">
+                    <button>Hexabooking</button>
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <!-- Fourth Page -->
+    <section class="clients-section-wrapper">
+      <div class="clients-section">
+            <p class="client-section-title theme-color">ILS NOUS ON FAIT CONFIANCE</p>
+            <section class="hex-wrapper">
+            <div class="hexagrid">
+            <!-- 1rst row  -->
+            <div class="row">
+                <div class="hexagon pusher"></div>
+              </div>
+            <!--  2nd row  -->
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="http://webneel.com/daily/sites/default/files/images/daily/09-2013/3-deer-wildlife-photography.preview.jpg" alt=""/>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <section class="hex-content-wrapper hex-all-content">
+                       <div class="hex-content-inner-wrapper">
+                           <span>Pure il padre</span> <br> 
+                            <span>vallone brenso.</span> <br> 
+                           <span>il guy's hospital</span> <br>
+                            <span>è l'ospedale</span> <br> 
+                           <span>  davanti al quale</span> <br> 
+                            <span>passo ogni giorno</span> <br> 
+                           <span>entrando a london </span> <br>
+                            <span>bridge e che scopro avere.</span> <br>
+                        </div>
+                    </section>
+                  </div>
+                </div>
+                <div class="hexagon pusher"></div>        
+                <div class="hexagon pusher"></div>    
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                      
+                    </div>
+                  </div>
+                </div>  
+            </div>
+        <!--    4th row   -->
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon pusher"></div>
+                
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+            <!--     5th row  -->
+              <div class="row">
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="http://webneel.com/daily/sites/default/files/images/daily/09-2013/3-deer-wildlife-photography.preview.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="http://webneel.com/daily/sites/default/files/images/daily/09-2013/3-deer-wildlife-photography.preview.jpg" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="http://webneel.com/daily/sites/default/files/images/daily/09-2013/3-deer-wildlife-photography.preview.jpg" alt=""/>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="hexagon pusher"></div>
+              </div>
+        
+              <div class="row">   
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="http://webneel.com/daily/sites/default/files/images/daily/09-2013/3-deer-wildlife-photography.preview.jpg" alt=""/>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <section class="hex-content-wrapper hex-all-content">
+                       <div class="hex-content-inner-wrapper">
+                           <span>Pure il padre</span> <br> 
+                            <span>vallone brenso.</span> <br> 
+                           <span>il guy's hospital</span> <br>
+                            <span>è l'ospedale</span> <br> 
+                           <span>  davanti al quale</span> <br> 
+                            <span>passo ogni giorno</span> <br> 
+                           <span>entrando a london </span> <br>
+                            <span>bridge e che scopro avere.</span> <br>
+                        </div>
+                    </section>
+                </div>
+                </div>
+                <div class="hexagon pusher"></div>
+                    
+                 <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" alt=""/>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="hexagon pusher"></div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="http://webneel.com/daily/sites/default/files/images/daily/09-2013/3-deer-wildlife-photography.preview.jpg" alt=""/>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="hexagon pusher"></div>
+                <div class="hexagon">
+                  <div class="inner-hex">
+                    <div class="hex-content">
+                      <img src="http://webneel.com/daily/sites/default/files/images/daily/09-2013/3-deer-wildlife-photography.preview.jpg" alt=""/>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      </div>
+    </section>
+
+    <!-- Last Page -->
+    <section class="contact-us-section">
+        <p class="contact-us-title">Contactez-nous ;)</p>
+        <div class="contact-us-wrapper">
+            <form class="contact-us-form" action="#">
+                <div class="details-wrapper">
+                    <div class="details-inner-wrapper">
+                        <div class="basic-details">
+                           <div class="form-in-wrap">
+                               <input type="text" name="nom" placeholder="nom">
+                           </div>
+                           <div class="form-in-wrap">
+                               <input type="email" name="email" placeholder="email">
+                           </div>
+                           <div class="form-in-wrap">
+                               <input type="tel" name="telephone" placeholder="No Telephone">
+                           </div>
+                       </div>
+
+                        <div class="message-area">
+                           <textarea name="message" class="message">
+                           </textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-btn-wrap">
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+</body>
+</html>
